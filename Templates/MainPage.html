@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VS Tours</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    .myLink {display: none}
+
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- Navigation Bar -->
+<div  class="w3-bar w3-white w3-border-bottom w3-xlarge">
+    <a  href="http://127.0.0.1:5000/" class="w3-bar-item w3-button w3-text-blue"><b><i
+            class="fa fa-map-marker w3-margin-right"></i>VS Tours</b></a>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+    <img class="w3-image" src="https://wallpaperaccess.com/full/111853.jpg" alt="Paris" width="1500" height="700">
+    <div class="w3-display-middle" style="width:65%">
+        <div class="w3-bar w3-black"></div>
+
+        <!-- Tab -->
+        <div>
+            <div id="Flight" class="w3-container w3-white w3-padding-16 myLink" style="display: block;">
+                <div class="w3-row-padding" style="margin:0 -16px;">
+                    <div class="w3-half">
+                        <h2> Hello, User <a href=""></a> !</h2>
+                         <form action="http://127.0.0.1:5000/buy" method="get">
+                            <input type="submit" value="Buy ticket">
+                        </form>
+                        <form action="http://127.0.0.1:5000/delete" method="get">
+                            <input type="submit" value="Delete ticket">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- Contact -->
+<div class="w3-container">
+    <h2>Contact Us</h2>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +972 524040283<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> E-mail: allstar3811@gmail.com<br>
+</div>
+
+<!-- End page content -->
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+
+
+
+</script>
+</body>
+</html>
